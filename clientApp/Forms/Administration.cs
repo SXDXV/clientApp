@@ -23,13 +23,14 @@ namespace clientApp.Forms
 
         private void Administration_Load(object sender, EventArgs e)
         {
-            userProfile = new Forms.UserProfile();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             /* Переход от формы к форме при помощи обощенного метода 
             ("Форма которая открывается","Форма которая закрывается")*/
+            userProfile = new Forms.UserProfile();
             SwitchForms.SwitchFormsMethod(ref userProfile, this);
         }
     }

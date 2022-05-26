@@ -66,6 +66,7 @@ namespace clientApp.Forms
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(30, 89);
+            this.dateTimePicker1.MinDate = new System.DateTime(2022, 5, 26, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 15;
@@ -90,7 +91,7 @@ namespace clientApp.Forms
             "Санкт-Петербург"});
             this.comboBox1.Location = new System.Drawing.Point(57, 165);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.Size = new System.Drawing.Size(150, 23);
             this.comboBox1.TabIndex = 17;
             this.comboBox1.Text = "Москва";
             // 
@@ -102,9 +103,9 @@ namespace clientApp.Forms
             "Москва",
             "Воронеж",
             "Санкт-Петербург"});
-            this.comboBox2.Location = new System.Drawing.Point(208, 165);
+            this.comboBox2.Location = new System.Drawing.Point(244, 165);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
+            this.comboBox2.Size = new System.Drawing.Size(150, 23);
             this.comboBox2.TabIndex = 18;
             this.comboBox2.Text = "Санкт-Петербург";
             // 
@@ -122,7 +123,7 @@ namespace clientApp.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(183, 166);
+            this.label5.Location = new System.Drawing.Point(219, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 19);
             this.label5.TabIndex = 20;

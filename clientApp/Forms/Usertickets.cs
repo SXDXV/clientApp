@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clientApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace clientApp.Forms
 {
     public partial class Usertickets : Form
     {
+        Forms.UserProfile userProfile;
+
         public Usertickets()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            userProfile = new Forms.UserProfile();
+            SwitchForms.SwitchFormsMethod(ref userProfile, this);
         }
     }
 }

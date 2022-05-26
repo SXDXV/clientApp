@@ -13,7 +13,7 @@ namespace clientApp
 {
     public partial class Registration : Form
     {
-        Sign sign = new Sign();
+        Sign sign;
 
         public Registration()
         {
@@ -22,12 +22,20 @@ namespace clientApp
 
         private void label15_Click(object sender, EventArgs e)
         {
+            sign = new Sign();
             SwitchForms.SwitchFormsMethod(ref sign, this);
         }
 
         private void Registration_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sign = new Sign();
+            MessageBox.Show("Вы успешно зарегистрированы!","Уведомление");
+            SwitchForms.SwitchFormsMethod(ref sign, this);
         }
     }
 }

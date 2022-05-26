@@ -14,6 +14,8 @@ namespace clientApp.Forms
 {
     public partial class Information : Form
     {
+        Sign sign;
+
         public Information()
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace clientApp.Forms
 
         private void label15_Click(object sender, EventArgs e)
         {
-            Sign sign = new Sign();
+            sign = new Sign();
             SwitchForms.SwitchFormsMethod(ref sign, this);
         }
     }

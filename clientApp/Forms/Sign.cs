@@ -25,14 +25,12 @@ namespace clientApp
 
         private void Sign_Load(object sender, EventArgs e)
         {
-            registration = new Registration();
-            information = new Forms.Information();
-            userProfile = new Forms.UserProfile();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
+            registration = new Registration();
             SwitchForms.SwitchFormsMethod(ref registration, this);
             //SwitchForms.SwitchFormsMethod<Registration, Sign>(ref registration, this);
         }
@@ -41,11 +39,13 @@ namespace clientApp
         {
             /* Переход от формы к форме при помощи обощенного метода 
             ("Форма которая открывается","Форма которая закрывается")*/
+            information = new Forms.Information();
             SwitchForms.SwitchFormsMethod(ref information, this);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            userProfile = new Forms.UserProfile();
             SwitchForms.SwitchFormsMethod(ref userProfile, this);
         }
     }

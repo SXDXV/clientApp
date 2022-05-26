@@ -26,35 +26,36 @@ namespace clientApp.Forms
 
         private void UserProfile_Load(object sender, EventArgs e)
         {
-            administration = new Forms.Administration();
-            flight = new Forms.Flight();
-            usertickets = new Forms.Usertickets();
-            editingProfile = new Forms.EditingProfile();
-            sign = new Sign();
+
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
+            sign = new Sign();
             SwitchForms.SwitchFormsMethod(ref sign, this);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            flight = new Forms.Flight();
             SwitchForms.SwitchFormsMethod(ref flight, this);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            usertickets = new Forms.Usertickets();
             SwitchForms.SwitchFormsMethod(ref usertickets, this);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            editingProfile = new Forms.EditingProfile();
             SwitchForms.SwitchFormsMethod(ref editingProfile, this);
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
+            administration = new Forms.Administration();
             SwitchForms.SwitchFormsMethod(ref administration, this);
         }
     }

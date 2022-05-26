@@ -31,5 +31,10 @@ namespace clientApp.Forms
             userProfile = new UserProfile();
             SwitchForms.SwitchFormsMethod(ref userProfile, this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
