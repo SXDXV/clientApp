@@ -13,19 +13,29 @@ namespace clientApp.Forms
 {
     public partial class UserProfile : Form
     {
-        Forms.Administration administration = new Forms.Administration();
-        Forms.Flight flight = new Forms.Flight();
-        Forms.Usertickets usertickets = new Forms.Usertickets();
-        Sign sign = new Sign();
+        Forms.Administration administration;
+        Forms.Flight flight;
+        Forms.Usertickets usertickets;
+        Forms.EditingProfile editingProfile;
+        Sign sign;
 
         public UserProfile()
         {
             InitializeComponent();
         }
 
+        private void UserProfile_Load(object sender, EventArgs e)
+        {
+            administration = new Forms.Administration();
+            flight = new Forms.Flight();
+            usertickets = new Forms.Usertickets();
+            editingProfile = new Forms.EditingProfile();
+            sign = new Sign();
+        }
+
         private void label5_Click(object sender, EventArgs e)
         {
-            SwitchForms.SwitchFormsMethod(ref administration, this);
+            SwitchForms.SwitchFormsMethod(ref sign, this);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -33,9 +43,19 @@ namespace clientApp.Forms
             SwitchForms.SwitchFormsMethod(ref flight, this);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            SwitchForms.SwitchFormsMethod(ref usertickets, this);
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SwitchForms.SwitchFormsMethod(ref editingProfile, this);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            SwitchForms.SwitchFormsMethod(ref administration, this);
         }
     }
 }

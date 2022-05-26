@@ -14,9 +14,9 @@ namespace clientApp
     public partial class Sign : Form
     {
         // Импользуемые формы
-        Registration registration = new Registration();
-        Forms.Information information = new Forms.Information();
-        Forms.UserProfile userProfile = new Forms.UserProfile();
+        Registration registration;
+        Forms.Information information;
+        Forms.UserProfile userProfile;
 
         public Sign()
         {
@@ -25,6 +25,9 @@ namespace clientApp
 
         private void Sign_Load(object sender, EventArgs e)
         {
+            registration = new Registration();
+            information = new Forms.Information();
+            userProfile = new Forms.UserProfile();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 

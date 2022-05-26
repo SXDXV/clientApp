@@ -53,6 +53,18 @@
     <Compile Include="Forms\Administration.Designer.cs">
       <DependentUpon>Administration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Appeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Appeal.Designer.cs">
+      <DependentUpon>Appeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditingProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditingProfile.Designer.cs">
+      <DependentUpon>EditingProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Flight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,12 @@
     <EmbeddedResource Include="Forms\Administration.resx">
       <DependentUpon>Administration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Appeal.resx">
+      <DependentUpon>Appeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditingProfile.resx">
+      <DependentUpon>EditingProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Flight.resx">
       <DependentUpon>Flight.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usertickets.resx">
+      <DependentUpon>Usertickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -54,13 +54,15 @@ namespace clientApp
             this.label16 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(297, 455);
+            this.button1.Location = new System.Drawing.Point(297, 490);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 47);
             this.button1.TabIndex = 17;
@@ -70,7 +72,7 @@ namespace clientApp
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(244, 362);
+            this.textBox2.Location = new System.Drawing.Point(244, 397);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(300, 23);
@@ -80,7 +82,7 @@ namespace clientApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(240, 340);
+            this.label3.Location = new System.Drawing.Point(240, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 19);
             this.label3.TabIndex = 14;
@@ -89,7 +91,7 @@ namespace clientApp
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(244, 104);
+            this.textBox1.Location = new System.Drawing.Point(244, 99);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 23);
             this.textBox1.TabIndex = 13;
@@ -98,7 +100,7 @@ namespace clientApp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(240, 82);
+            this.label2.Location = new System.Drawing.Point(240, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(271, 19);
             this.label2.TabIndex = 12;
@@ -117,7 +119,7 @@ namespace clientApp
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(244, 417);
+            this.textBox3.Location = new System.Drawing.Point(244, 452);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(300, 23);
@@ -127,7 +129,7 @@ namespace clientApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(240, 395);
+            this.label4.Location = new System.Drawing.Point(240, 430);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 19);
             this.label4.TabIndex = 18;
@@ -136,7 +138,7 @@ namespace clientApp
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(244, 247);
+            this.textBox4.Location = new System.Drawing.Point(244, 286);
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(300, 23);
@@ -146,7 +148,7 @@ namespace clientApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(240, 225);
+            this.label5.Location = new System.Drawing.Point(240, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 19);
             this.label5.TabIndex = 20;
@@ -155,7 +157,7 @@ namespace clientApp
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(244, 303);
+            this.textBox5.Location = new System.Drawing.Point(244, 338);
             this.textBox5.Name = "textBox5";
             this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(300, 23);
@@ -165,7 +167,7 @@ namespace clientApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(240, 281);
+            this.label6.Location = new System.Drawing.Point(240, 316);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(261, 19);
             this.label6.TabIndex = 22;
@@ -175,7 +177,7 @@ namespace clientApp
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(240, 135);
+            this.label7.Location = new System.Drawing.Point(240, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(253, 19);
             this.label7.TabIndex = 24;
@@ -184,7 +186,7 @@ namespace clientApp
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(244, 158);
+            this.dateTimePicker1.Location = new System.Drawing.Point(244, 153);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(300, 23);
             this.dateTimePicker1.TabIndex = 25;
@@ -193,7 +195,7 @@ namespace clientApp
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(550, 104);
+            this.label8.Location = new System.Drawing.Point(550, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 19);
             this.label8.TabIndex = 26;
@@ -203,7 +205,7 @@ namespace clientApp
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(550, 158);
+            this.label9.Location = new System.Drawing.Point(550, 153);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(16, 19);
             this.label9.TabIndex = 27;
@@ -213,7 +215,7 @@ namespace clientApp
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(550, 303);
+            this.label10.Location = new System.Drawing.Point(550, 338);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 19);
             this.label10.TabIndex = 28;
@@ -223,7 +225,7 @@ namespace clientApp
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(550, 362);
+            this.label11.Location = new System.Drawing.Point(550, 397);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 19);
             this.label11.TabIndex = 29;
@@ -233,7 +235,7 @@ namespace clientApp
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(550, 417);
+            this.label12.Location = new System.Drawing.Point(550, 452);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(16, 19);
             this.label12.TabIndex = 30;
@@ -243,7 +245,7 @@ namespace clientApp
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(247, 528);
+            this.label13.Location = new System.Drawing.Point(247, 557);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(294, 19);
             this.label13.TabIndex = 31;
@@ -253,7 +255,7 @@ namespace clientApp
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(16, 513);
+            this.label14.Location = new System.Drawing.Point(16, 542);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(104, 19);
             this.label14.TabIndex = 32;
@@ -264,7 +266,7 @@ namespace clientApp
             this.label15.AutoSize = true;
             this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(14, 532);
+            this.label15.Location = new System.Drawing.Point(14, 561);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(112, 19);
             this.label15.TabIndex = 33;
@@ -275,7 +277,7 @@ namespace clientApp
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(241, 193);
+            this.label16.Location = new System.Drawing.Point(240, 186);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(142, 19);
             this.label16.TabIndex = 34;
@@ -285,7 +287,7 @@ namespace clientApp
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(388, 195);
+            this.checkBox1.Location = new System.Drawing.Point(387, 188);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(37, 19);
             this.checkBox1.TabIndex = 35;
@@ -296,18 +298,39 @@ namespace clientApp
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox2.Location = new System.Drawing.Point(429, 195);
+            this.checkBox2.Location = new System.Drawing.Point(428, 188);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(38, 19);
             this.checkBox2.TabIndex = 36;
             this.checkBox2.Text = "Ж";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(245, 236);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.PasswordChar = '*';
+            this.textBox6.Size = new System.Drawing.Size(300, 23);
+            this.textBox6.TabIndex = 38;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(241, 214);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(274, 19);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "Укажите ваши паспортные данные:";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 565);
+            this.ClientSize = new System.Drawing.Size(803, 597);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label16);
@@ -368,6 +391,8 @@ namespace clientApp
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label17;
     }
 }
 

@@ -107,6 +107,7 @@ namespace clientApp.Forms
             this.button3.TabIndex = 20;
             this.button3.Text = "Назад";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Administration
             // 
@@ -121,7 +122,8 @@ namespace clientApp.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Administration";
-            this.Text = "Administration";
+            this.Text = "SoftAir | Администрирование";
+            this.Load += new System.EventHandler(this.Administration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
