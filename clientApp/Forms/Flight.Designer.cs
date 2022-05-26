@@ -146,6 +146,7 @@ namespace clientApp.Forms
             this.button1.TabIndex = 22;
             this.button1.Text = "Купить билет на выбранный рейс";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -157,6 +158,7 @@ namespace clientApp.Forms
             this.button2.TabIndex = 23;
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Flight
             // 
@@ -176,6 +178,7 @@ namespace clientApp.Forms
             this.Controls.Add(this.label1);
             this.Name = "Flight";
             this.Text = "SoftAir | Рейсы";
+            this.Load += new System.EventHandler(this.Flight_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

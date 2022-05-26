@@ -24,7 +24,7 @@ namespace clientApp.Classes
         {
             classForm = new TForm1();
             // Присвоение координат открытия новой формы
-            classForm.StartPosition = FormStartPosition.Manual;
+            classForm.StartPosition = FormStartPosition.CenterScreen;
             // Показ новой формы и скрытие текущей
             classForm.Show();
             f2.Hide();
