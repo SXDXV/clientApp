@@ -21,7 +21,7 @@ namespace clientApp
         private void label15_Click(object sender, EventArgs e)
         {
             Sign sign = new Sign();
-            SwitchForms.SwitchFormsMethod<Sign, Registration>(ref sign, this);
+            SwitchForms.SwitchFormsMethod(ref sign, this);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using clientApp.Classes;
 
 namespace clientApp.Forms
 {
@@ -54,14 +55,8 @@ namespace clientApp.Forms
 
         private void label15_Click(object sender, EventArgs e)
         {
-            // Создание экземпляра формы
             Sign sign = new Sign();
-            // Присвоение координат открытия новой формы
-            sign.StartPosition = FormStartPosition.Manual;
-            sign.Location = Location;
-            // Показ новой формы и скрытие текущей
-            sign.Show();
-            this.Hide();
+            SwitchForms.SwitchFormsMethod(ref sign, this);
         }
     }
 }

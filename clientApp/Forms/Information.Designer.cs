@@ -60,7 +60,7 @@ namespace clientApp.Forms
             this.label15.AutoSize = true;
             this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(44, 457);
+            this.label15.Location = new System.Drawing.Point(387, 454);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(112, 19);
             this.label15.TabIndex = 35;
@@ -71,7 +71,7 @@ namespace clientApp.Forms
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(44, 438);
+            this.label14.Location = new System.Drawing.Point(292, 454);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(104, 19);
             this.label14.TabIndex = 34;
@@ -87,7 +87,7 @@ namespace clientApp.Forms
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Information";
-            this.Text = "Information";
+            this.Text = "SoftAir | Информация";
             this.Load += new System.EventHandler(this.Information_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

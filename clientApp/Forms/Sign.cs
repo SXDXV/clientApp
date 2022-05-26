@@ -13,6 +13,10 @@ namespace clientApp
 {
     public partial class Sign : Form
     {
+        // Импользуемые формы
+        Registration registration = new Registration();
+        Forms.Information information = new Forms.Information();
+
         public Sign()
         {
             InitializeComponent();
@@ -25,14 +29,15 @@ namespace clientApp
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Registration registration = new Registration();
-            SwitchForms.SwitchFormsMethod<Registration, Sign>(ref registration, this);
+            SwitchForms.SwitchFormsMethod(ref registration, this);
+            //SwitchForms.SwitchFormsMethod<Registration, Sign>(ref registration, this);
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            Forms.Information information = new Forms.Information();
-            SwitchForms.SwitchFormsMethod<Forms.Information, Sign>(ref information, this);
+            /* Переход от формы к форме при помощи обощенного метода 
+            ("Форма которая открывается","Форма которая закрывается")*/
+            SwitchForms.SwitchFormsMethod(ref information, this);
         }
     }
 }
