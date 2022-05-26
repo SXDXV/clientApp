@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clientApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,14 +20,8 @@ namespace clientApp
 
         private void label15_Click(object sender, EventArgs e)
         {
-            // Создание экземпляра формы
             Sign sign = new Sign();
-            // Присвоение координат открытия новой формы
-            sign.StartPosition = FormStartPosition.Manual;
-            sign.Location = Location;
-            // Показ новой формы и скрытие текущей
-            sign.Show();
-            this.Hide();
+            SwitchForms.SwitchFormsMethod<Sign, Registration>(ref sign, this);
         }
     }
 }

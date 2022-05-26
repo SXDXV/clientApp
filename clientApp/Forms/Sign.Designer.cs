@@ -124,6 +124,7 @@ namespace clientApp
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.Location = new System.Drawing.Point(26, 195);
             this.checkBox1.Name = "checkBox1";
@@ -142,9 +143,11 @@ namespace clientApp
             this.label7.Size = new System.Drawing.Size(240, 19);
             this.label7.TabIndex = 9;
             this.label7.Text = "Узнать больше о приложении!";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(96, 234);
             this.button1.Name = "button1";
