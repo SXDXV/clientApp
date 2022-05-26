@@ -16,5 +16,12 @@ namespace clientApp
         {
             InitializeComponent();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Registration reg = new Registration();
+            reg.Show();
+            this.Hide();
+        }
     }
 }
