@@ -16,6 +16,7 @@ namespace clientApp
         // Импользуемые формы
         Registration registration = new Registration();
         Forms.Information information = new Forms.Information();
+        Forms.UserProfile userProfile = new Forms.UserProfile();
 
         public Sign()
         {
@@ -38,6 +39,11 @@ namespace clientApp
             /* Переход от формы к форме при помощи обощенного метода 
             ("Форма которая открывается","Форма которая закрывается")*/
             SwitchForms.SwitchFormsMethod(ref information, this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SwitchForms.SwitchFormsMethod(ref userProfile, this);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace clientApp
 {
     public partial class Registration : Form
     {
+        Sign sign = new Sign();
+
         public Registration()
         {
             InitializeComponent();
@@ -20,8 +22,12 @@ namespace clientApp
 
         private void label15_Click(object sender, EventArgs e)
         {
-            Sign sign = new Sign();
             SwitchForms.SwitchFormsMethod(ref sign, this);
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

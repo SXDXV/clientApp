@@ -51,13 +51,16 @@ namespace clientApp
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(297, 423);
+            this.button1.Location = new System.Drawing.Point(297, 455);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 47);
             this.button1.TabIndex = 17;
@@ -67,7 +70,7 @@ namespace clientApp
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(244, 330);
+            this.textBox2.Location = new System.Drawing.Point(244, 362);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(300, 23);
@@ -77,7 +80,7 @@ namespace clientApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(240, 308);
+            this.label3.Location = new System.Drawing.Point(240, 340);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 19);
             this.label3.TabIndex = 14;
@@ -114,7 +117,7 @@ namespace clientApp
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(244, 385);
+            this.textBox3.Location = new System.Drawing.Point(244, 417);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(300, 23);
@@ -124,7 +127,7 @@ namespace clientApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(240, 363);
+            this.label4.Location = new System.Drawing.Point(240, 395);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 19);
             this.label4.TabIndex = 18;
@@ -133,7 +136,7 @@ namespace clientApp
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(244, 215);
+            this.textBox4.Location = new System.Drawing.Point(244, 247);
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(300, 23);
@@ -143,7 +146,7 @@ namespace clientApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(240, 193);
+            this.label5.Location = new System.Drawing.Point(240, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 19);
             this.label5.TabIndex = 20;
@@ -152,7 +155,7 @@ namespace clientApp
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(244, 271);
+            this.textBox5.Location = new System.Drawing.Point(244, 303);
             this.textBox5.Name = "textBox5";
             this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(300, 23);
@@ -162,7 +165,7 @@ namespace clientApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(240, 249);
+            this.label6.Location = new System.Drawing.Point(240, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(261, 19);
             this.label6.TabIndex = 22;
@@ -210,7 +213,7 @@ namespace clientApp
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(550, 271);
+            this.label10.Location = new System.Drawing.Point(550, 303);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 19);
             this.label10.TabIndex = 28;
@@ -220,7 +223,7 @@ namespace clientApp
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(550, 330);
+            this.label11.Location = new System.Drawing.Point(550, 362);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 19);
             this.label11.TabIndex = 29;
@@ -230,7 +233,7 @@ namespace clientApp
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(550, 385);
+            this.label12.Location = new System.Drawing.Point(550, 417);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(16, 19);
             this.label12.TabIndex = 30;
@@ -268,11 +271,46 @@ namespace clientApp
             this.label15.Text = "авторизации.";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(241, 193);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(142, 19);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Укажите ваш пол:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(388, 195);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(37, 19);
+            this.checkBox1.TabIndex = 35;
+            this.checkBox1.Text = "М";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox2.Location = new System.Drawing.Point(429, 195);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(38, 19);
+            this.checkBox2.TabIndex = 36;
+            this.checkBox2.Text = "Ж";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 565);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -297,6 +335,7 @@ namespace clientApp
             this.Controls.Add(this.label1);
             this.Name = "Registration";
             this.Text = "SoftAir | Регистрация в системе";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,6 +365,9 @@ namespace clientApp
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 
