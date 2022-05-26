@@ -171,6 +171,7 @@ namespace clientApp
             this.Controls.Add(this.label1);
             this.Name = "Sign";
             this.Text = "SoftAir | Авторизация";
+            this.Load += new System.EventHandler(this.Sign_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

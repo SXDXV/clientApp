@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace clientApp
+namespace clientApp.Forms
 {
-    public partial class Registration : Form
+    public partial class UserProfile : Form
     {
-        public Registration()
+        public UserProfile()
         {
             InitializeComponent();
         }
