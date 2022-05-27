@@ -36,8 +36,8 @@ namespace clientApp.Forms
         private void UserProfile_Load(object sender, EventArgs e)
         {
             role = 1;
-            string login = ControlID.checkLogin;
-            string password = ControlID.checkPassword;
+            string login = DataTransfer.checkLogin;
+            string password = DataTransfer.checkPassword;
             //string login = sign.checkLogin;
             //string password = sign.checkPassword;
             try
@@ -49,12 +49,13 @@ namespace clientApp.Forms
                 adapter.Fill(dTable);
                 if (dTable.Rows.Count == 0)
                 {
-                    MessageBox.Show(login + " " + password + " 2");
+                    role = 2;
                 }
                 else
                 {
-                    MessageBox.Show(login + " " + password + " 1");
+                    role = 1;
                 }
+                DataTransfer.checkRole = role;
             }
             catch(Exception ex)
             {
@@ -87,8 +88,12 @@ namespace clientApp.Forms
 
         private void label6_Click(object sender, EventArgs e)
         {
-            administration = new Forms.Administration();
-            SwitchForms.SwitchFormsMethod(ref administration, this);
+            if (role == 2)
+            {
+                administration = new Forms.Administration();
+                SwitchForms.SwitchFormsMethod(ref administration, this);
+            }
+            else { MessageBox.Show("Извините, но вы не являетесь администратором", "Ты куда?"); }
         }
     }
 }

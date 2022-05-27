@@ -12,10 +12,11 @@ using System.Windows.Forms;
 
 namespace clientApp
 {
-    public static class ControlID
+    public static class DataTransfer
     {
         public static string checkLogin { get; set; }
         public static string checkPassword { get; set; }
+        public static int checkRole { get; set; }
     }
     public partial class Sign : Form
     {
@@ -69,8 +70,8 @@ namespace clientApp
                 adapter.Fill(dTable);
                 if (dTable.Rows.Count != 0)
                 {
-                    ControlID.checkLogin = checkLog;
-                    ControlID.checkPassword = checkPass;
+                    DataTransfer.checkLogin = checkLog;
+                    DataTransfer.checkPassword = checkPass;
                     userProfile = new Forms.UserProfile();
                     SwitchForms.SwitchFormsMethod(ref userProfile, this);
                 }
