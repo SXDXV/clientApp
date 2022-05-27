@@ -51,20 +51,20 @@ namespace clientApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(,connection);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-                connection.Close();
+            //try
+            //{
+            //    connection.Open();
+            //    MySqlDataAdapter adapter = new MySqlDataAdapter(, connection);
+            //    DataSet ds = new DataSet();
+            //    adapter.Fill(ds);
+            //    dataGridView1.DataSource = ds.Tables[0];
+            //    connection.Close();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString());
+            //}
 
 
             userProfile = new Forms.UserProfile();

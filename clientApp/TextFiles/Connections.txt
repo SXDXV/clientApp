@@ -1,0 +1,7 @@
+﻿//ГУАП
+static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
+static string conUser = "server=localhost;user=userAir;password=userAir;database=airport;port=3306";
+
+//HOME
+static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
+static string conUser = "server=localhost;user=userAir;password=userAir;database=airport;port=3306";
