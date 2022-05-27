@@ -15,14 +15,18 @@ namespace clientApp
     public partial class Sign : Form
     {
         //string check;
-        static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
-        static string conUser = "server=localhost;user=userAir;password=userAir;database=airport;port=3306";
-        MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
+        //static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
+        static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
+        //MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
+        bool userExist = false;
         // Импользуемые формы
         Registration registration;
         Forms.Information information;
         Forms.UserProfile userProfile;
+
+        string checkLogin;
+        string checkPassword;
 
         public Sign()
         {
@@ -51,24 +55,29 @@ namespace clientApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    connection.Open();
-            //    MySqlDataAdapter adapter = new MySqlDataAdapter(, connection);
-            //    DataSet ds = new DataSet();
-            //    adapter.Fill(ds);
-            //    dataGridView1.DataSource = ds.Tables[0];
-            //    connection.Close();
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString());
-            //}
-
-
-            userProfile = new Forms.UserProfile();
-            SwitchForms.SwitchFormsMethod(ref userProfile, this);
+            checkLogin = textBox1.Text;
+            checkPassword = textBox2.Text;
+            try
+            {
+                connectionUser.Open();
+                DataTable dTable = new DataTable();
+                String sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + checkLogin + "' and `Пароль` = '" + checkPassword + "';";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuery, connectionUser);
+                if (dTable.Rows.Count != 0)
+                {
+                    userProfile = new Forms.UserProfile();
+                    SwitchForms.SwitchFormsMethod(ref userProfile, this);
+                }
+                else
+                {
+                    MessageBox.Show("Подождите, такого пользователя не существует. Проверьте введенные данные, или зарегистрируйтесь еще раз.", "");
+                }
+                connectionUser.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

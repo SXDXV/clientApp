@@ -152,7 +152,7 @@ namespace clientApp.Forms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 19);
             this.label2.TabIndex = 40;
-            this.label2.Text = "Првоерьте ваше ФИО:";
+            this.label2.Text = "Проверьте ваше ФИО:";
             // 
             // label1
             // 
