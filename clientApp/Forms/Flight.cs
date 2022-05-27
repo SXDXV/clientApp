@@ -1,4 +1,5 @@
 ﻿using clientApp.Classes;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,15 @@ namespace clientApp.Forms
 {
     public partial class Flight : Form
     {
+        string date;
+        string townFrom;
+        string townTo;
+
         Forms.UserProfile userProfile;
         Forms.BuyTicket buyTicket;
+
+        static string con = "server=localhost;user=root;password=12345;database=airport;port=3306";
+        MySqlConnection connectionUser = new MySqlConnection(con);
 
         public Flight()
         {
@@ -23,7 +31,8 @@ namespace clientApp.Forms
 
         private void Flight_Load(object sender, EventArgs e)
         {
-            
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +45,30 @@ namespace clientApp.Forms
         {
             buyTicket = new Forms.BuyTicket();
             buyTicket.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            date = dateTimePicker1.Text;
+            townFrom = comboBox1.SelectedItem.ToString();
+            townTo = comboBox2.SelectedItem.ToString();
+
+            try
+            {
+                connectionUser.Open();
+                string sql = "SELECT * FROM airport.рейсы where Дата = '"+date+"' and Откуда = '"+townFrom+"' and Куда = '"+townTo+"';";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, connectionUser);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                connectionUser.Close();
+
+            }
+            catch (Exception ex)
+            {
+                connectionUser.Close();
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
