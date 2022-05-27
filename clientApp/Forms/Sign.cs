@@ -12,20 +12,23 @@ using System.Windows.Forms;
 
 namespace clientApp
 {
+    public static class ControlID
+    {
+        public static string checkLogin { get; set; }
+        public static string checkPassword { get; set; }
+    }
     public partial class Sign : Form
     {
-        //string check;
-        //static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
         static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
-        //MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
+        
         // Импользуемые формы
         Registration registration;
         Forms.Information information;
         Forms.UserProfile userProfile;
 
-        string checkLogin;
-        string checkPassword;
+        //public static string checkLogin { get; set; }
+        //public static string checkPassword { get; set; }
 
         public Sign()
         {
@@ -54,24 +57,26 @@ namespace clientApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            checkLogin = textBox1.Text;
-            checkPassword = textBox2.Text;
+            string checkLog = textBox1.Text;
+            string checkPass = textBox2.Text;
             try
             {
                 connectionUser.Open();
                 DataTable dTable = new DataTable();
                 //String sqlQuery = "SELECT * FROM airport.пользователи_пп where Логин = '"+checkLogin+"' and Пароль = '"+checkPassword+"';";
-                String sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + checkLogin + "' and `Пароль` = '" + checkPassword + "';";
+                String sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + checkLog + "' and `Пароль` = '" + checkPass + "';";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuery, connectionUser);
                 adapter.Fill(dTable);
                 if (dTable.Rows.Count != 0)
                 {
+                    ControlID.checkLogin = checkLog;
+                    ControlID.checkPassword = checkPass;
                     userProfile = new Forms.UserProfile();
                     SwitchForms.SwitchFormsMethod(ref userProfile, this);
                 }
                 else
                 {
-                    MessageBox.Show("Подождите, такого пользователя не существует. Проверьте введенные данные, или зарегистрируйтесь еще раз.", "");
+                    MessageBox.Show("Подождите, такого пользователя не существует. Проверьте введенные данные, или зарегистрируйтесь еще раз.", "Ой...");
                 }
                 connectionUser.Close();
             }

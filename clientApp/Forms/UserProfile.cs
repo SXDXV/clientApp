@@ -12,20 +12,21 @@ using System.Windows.Forms;
 
 namespace clientApp.Forms
 {
+
     public partial class UserProfile : Form
     {
         Forms.Administration administration;
         Forms.Flight flight;
         Forms.Usertickets usertickets;
         Forms.EditingProfile editingProfile;
-        Sign sign;
+        Sign sign = new Sign();
 
         static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
         static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
         MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
 
-        int role = 1; // 1 - обычный пользователь; 2 - администратор
+        int role; // 1 - обычный пользователь; 2 - администратор
 
         public UserProfile()
         {
@@ -34,12 +35,35 @@ namespace clientApp.Forms
 
         private void UserProfile_Load(object sender, EventArgs e)
         {
-
+            role = 1;
+            string login = ControlID.checkLogin;
+            string password = ControlID.checkPassword;
+            //string login = sign.checkLogin;
+            //string password = sign.checkPassword;
+            try
+            {
+                connectionUser.Open();
+                DataTable dTable = new DataTable();
+                String sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + login + "' and `Пароль` = '" + password + "' and Роль = '"+role+"';";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuery, connectionUser);
+                adapter.Fill(dTable);
+                if (dTable.Rows.Count == 0)
+                {
+                    MessageBox.Show(login + " " + password + " 2");
+                }
+                else
+                {
+                    MessageBox.Show(login + " " + password + " 1");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            sign = new Sign();
             SwitchForms.SwitchFormsMethod(ref sign, this);
         }
 
