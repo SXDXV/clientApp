@@ -12,13 +12,12 @@ using System.Windows.Forms;
 
 namespace clientApp
 {
-    public interface ControlID
+    public static class ControlID
     {
-        string checkLogin { get; set; }
-        string checkPassword { get; set; }
+        public static string checkLogin { get; set; }
+        public static string checkPassword { get; set; }
     }
-
-    public partial class Sign : Form, ControlID
+    public partial class Sign : Form
     {
         static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
         MySqlConnection connectionUser = new MySqlConnection(conUser);
