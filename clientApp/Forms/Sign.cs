@@ -61,8 +61,10 @@ namespace clientApp
             {
                 connectionUser.Open();
                 DataTable dTable = new DataTable();
+                //String sqlQuery = "SELECT * FROM airport.пользователи_пп where Логин = '"+checkLogin+"' and Пароль = '"+checkPassword+"';";
                 String sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + checkLogin + "' and `Пароль` = '" + checkPassword + "';";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuery, connectionUser);
+                adapter.Fill(dTable);
                 if (dTable.Rows.Count != 0)
                 {
                     userProfile = new Forms.UserProfile();
