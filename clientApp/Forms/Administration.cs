@@ -89,7 +89,7 @@ namespace clientApp.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable dTable = new DataTable();
-            String sqlQuery = " ";
+            string sqlQuery = " ";
             string nameTable = comboBox1.Text;
 
             try

@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataTransfer.cs" />
     <Compile Include="Classes\SwitchForms.cs" />
     <Compile Include="Forms\Administration.cs">
       <SubType>Form</SubType>

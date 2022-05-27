@@ -53,15 +53,20 @@ namespace clientApp.Forms
             townFrom = comboBox1.SelectedItem.ToString();
             townTo = comboBox2.SelectedItem.ToString();
 
+            DataTable dTable = new DataTable();
             try
             {
                 connectionUser.Open();
                 string sql = "SELECT * FROM airport.рейсы where Дата = '"+date+"' and Откуда = '"+townFrom+"' and Куда = '"+townTo+"';";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, connectionUser);
                 DataSet ds = new DataSet();
-                adapter.Fill(ds);
+                adapter.Fill(dTable);
                 dataGridView1.DataSource = ds.Tables[0];
                 connectionUser.Close();
+
+                DataTransfer.checkDate = date;
+                DataTransfer.checkCodeFlight = Convert.ToInt32(dTable.Rows[0]["Код рейса"]); ;
+                DataTransfer.checkPrice = Convert.ToInt32(dTable.Rows[0]["Цена(без скидки)"]);
 
             }
             catch (Exception ex)

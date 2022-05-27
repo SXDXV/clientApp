@@ -12,12 +12,7 @@ using System.Windows.Forms;
 
 namespace clientApp
 {
-    public static class DataTransfer
-    {
-        public static string checkLogin { get; set; }
-        public static string checkPassword { get; set; }
-        public static int checkRole { get; set; }
-    }
+
     public partial class Sign : Form
     {
         static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";

@@ -47,14 +47,22 @@ namespace clientApp.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox6.Location = new System.Drawing.Point(146, 211);
             this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
             this.textBox6.Size = new System.Drawing.Size(300, 23);
             this.textBox6.TabIndex = 62;
             // 
@@ -70,6 +78,7 @@ namespace clientApp.Forms
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Location = new System.Drawing.Point(145, 152);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -88,10 +97,10 @@ namespace clientApp.Forms
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.Location = new System.Drawing.Point(145, 320);
             this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(300, 23);
             this.textBox5.TabIndex = 50;
             // 
@@ -107,10 +116,10 @@ namespace clientApp.Forms
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.Location = new System.Drawing.Point(145, 268);
             this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(300, 23);
             this.textBox4.TabIndex = 48;
             // 
@@ -128,7 +137,7 @@ namespace clientApp.Forms
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(206, 528);
+            this.button1.Location = new System.Drawing.Point(206, 647);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 47);
             this.button1.TabIndex = 44;
@@ -138,6 +147,7 @@ namespace clientApp.Forms
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(145, 98);
             this.textBox1.Name = "textBox1";
@@ -167,9 +177,8 @@ namespace clientApp.Forms
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(146, 420);
+            this.textBox2.Location = new System.Drawing.Point(146, 539);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(300, 23);
             this.textBox2.TabIndex = 64;
             // 
@@ -177,7 +186,7 @@ namespace clientApp.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(142, 398);
+            this.label3.Location = new System.Drawing.Point(142, 517);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(229, 19);
             this.label3.TabIndex = 63;
@@ -186,7 +195,7 @@ namespace clientApp.Forms
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(267, 490);
+            this.textBox3.Location = new System.Drawing.Point(267, 609);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(102, 23);
@@ -196,7 +205,7 @@ namespace clientApp.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(142, 453);
+            this.label4.Location = new System.Drawing.Point(142, 572);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(227, 57);
             this.label4.TabIndex = 65;
@@ -206,7 +215,7 @@ namespace clientApp.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(202, 614);
+            this.label8.Location = new System.Drawing.Point(202, 733);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(199, 19);
             this.label8.TabIndex = 68;
@@ -217,17 +226,109 @@ namespace clientApp.Forms
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(142, 595);
+            this.label13.Location = new System.Drawing.Point(142, 714);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(321, 19);
             this.label13.TabIndex = 67;
             this.label13.Text = "чтобы поменять эти данные, необходимо";
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton2.Location = new System.Drawing.Point(261, 361);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(118, 19);
+            this.radioButton2.TabIndex = 70;
+            this.radioButton2.Text = "Комфорт-класс";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton1.Location = new System.Drawing.Point(145, 361);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(110, 19);
+            this.radioButton1.TabIndex = 69;
+            this.radioButton1.Text = "Бизнес-класс";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(145, 408);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(67, 23);
+            this.textBox7.TabIndex = 72;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(141, 386);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 19);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Код рейса:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(235, 386);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 19);
+            this.label10.TabIndex = 73;
+            this.label10.Text = "Место:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown1.Location = new System.Drawing.Point(239, 408);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDown1.TabIndex = 74;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(142, 448);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 25);
+            this.label11.TabIndex = 75;
+            this.label11.Text = "Цена:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // BuyTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 648);
+            this.ClientSize = new System.Drawing.Size(611, 787);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox3);
@@ -248,6 +349,8 @@ namespace clientApp.Forms
             this.Controls.Add(this.label1);
             this.Name = "BuyTicket";
             this.Text = "BuyTicket";
+            this.Load += new System.EventHandler(this.BuyTicket_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +376,12 @@ namespace clientApp.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label11;
     }
 }

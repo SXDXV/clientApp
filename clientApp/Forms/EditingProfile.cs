@@ -41,7 +41,7 @@ namespace clientApp.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" || textBox2.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox6.Text != "" && checkBox1.Checked || checkBox2.Checked)
+            if (textBox1.Text != "" || textBox2.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox6.Text != "" && radioButton1.Checked || radioButton2.Checked)
             {
                 string password = textBox2.Text;
                 if (password == DataTransfer.checkPassword)
@@ -50,14 +50,14 @@ namespace clientApp.Forms
                     string[] FIO = login.Split(' ');
                     string name = FIO[1];
                     string midname = FIO[2];
-                    string lastname = FIO[1];
+                    string lastname = FIO[0];
                     string birth = dateTimePicker1.Text;
                     string gender;
                     string passport;
                     string eMail = "";
                     string numberOfPhone;
-                    if (checkBox1.Checked) { gender = checkBox1.Text; }
-                    else { gender = checkBox2.Text; }
+                    if (radioButton1.Checked) { gender = radioButton1.Text; }
+                    else { gender = radioButton2.Text; }
                     passport = textBox6.Text;
                     if (textBox4.Text != "") { eMail = textBox4.Text; }
                     numberOfPhone = textBox5.Text;
@@ -93,7 +93,7 @@ namespace clientApp.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Введет неверный пароль", "Ошибка");
+                    MessageBox.Show("Введен неверный пароль", "Ошибка");
                 }
             }
         }
@@ -113,8 +113,8 @@ namespace clientApp.Forms
                 
                 textBox1.Text = dTable.Rows[0]["Логин"].ToString();
                 dateTimePicker1.Text = dTable.Rows[0]["Дата рождения"].ToString();
-                if (dTable.Rows[0]["Пол"].ToString() == "м") { checkBox1.Checked = true; }
-                else { checkBox2.Checked = true; }
+                if (dTable.Rows[0]["Пол"].ToString() == "м") { radioButton1.Checked = true; }
+                else { radioButton2.Checked = true; }
                 textBox6.Text = dTable.Rows[0]["Паспортные данные"].ToString();
                 textBox4.Text = dTable.Rows[0]["Почта"].ToString();
                 textBox5.Text = dTable.Rows[0]["Мобильный телефон"].ToString();
