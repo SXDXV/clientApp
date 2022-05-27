@@ -47,11 +47,16 @@ namespace clientApp
         private void button1_Click(object sender, EventArgs e)
         {
             //INSERT INTO `airport`.`пользователи_пп` (`Id`, `Логин`, `Пароль`, `Роль`) VALUES ('1', 'Lvbnhbq', '1111', '1');
+            //INSERT INTO `airport`.`пользователи_пп` (`Паспортные данные`, `Фамилия`, `Имя`, `Отчество`, `Пол`, `Дата рождения`, `Почта`, `Мобильный телефон`, `Логин`, `Пароль`, `Роль`) VALUES ('1111 111111', '1', '1', '1', '1', '1997-09-09', 'в', 'в', 'в', 'в', '2');
             if (textBox1.Text!="" || textBox2.Text != "" || textBox3.Text != "" || textBox5.Text != "" || textBox6.Text != "" && radioButton1.Checked || radioButton2.Checked)
             {
                 if (textBox2.Text == textBox3.Text)
                 {
                     login = textBox1.Text;
+                    string[] FIO = login.Split(' ');
+                    string name = FIO[1];
+                    string midname = FIO[2];
+                    string lastname = FIO[1];
                     birth = dateTimePicker1.Text;
                     if (radioButton1.Checked) { gender = radioButton1.Text; }
                     else { gender = radioButton2.Text; }
@@ -66,7 +71,10 @@ namespace clientApp
                     try
                     {
                         connection.Open();
-                        sqlQuery = ("INSERT INTO `airport`.`пользователи_пп` (`Логин`, `Пароль`, `Роль`) VALUES ('" + login + "', '" + password + "', '1');");
+                        //sqlQuery = ("INSERT INTO `airport`.`пользователи_пп` (`Логин`, `Пароль`, `Роль`) VALUES ('" + login + "', '" + password + "', '1');");
+                        sqlQuery = ("INSERT INTO `airport`.`пользователи_пп` " +
+                            "(`Паспортные данные`, `Фамилия`, `Имя`, `Отчество`, `Пол`, `Дата рождения`, `Почта`, `Мобильный телефон`, `Логин`, `Пароль`, `Роль`) VALUES " +
+                            "('" + passport + "', '" + lastname + "', '" + name + "', '" + midname + "', '" + gender + "', '" + birth + "', '" + eMail + "', '" + numberOfPhone + "', '" + login + "', '" + password + "', '1');");
                         MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuery, connection);
 
                         connection.Close();

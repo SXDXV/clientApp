@@ -1,4 +1,5 @@
 ﻿using clientApp.Classes;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,13 @@ namespace clientApp.Forms
         Forms.Usertickets usertickets;
         Forms.EditingProfile editingProfile;
         Sign sign;
+
+        static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
+        static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
+        MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
+        MySqlConnection connectionUser = new MySqlConnection(conUser);
+
+        int role = 1; // 1 - обычный пользователь; 2 - администратор
 
         public UserProfile()
         {

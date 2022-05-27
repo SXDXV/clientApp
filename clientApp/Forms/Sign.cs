@@ -19,7 +19,6 @@ namespace clientApp
         static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
         //MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
-        bool userExist = false;
         // Импользуемые формы
         Registration registration;
         Forms.Information information;
