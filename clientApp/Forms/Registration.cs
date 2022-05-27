@@ -56,7 +56,7 @@ namespace clientApp
                     string[] FIO = login.Split(' ');
                     string name = FIO[1];
                     string midname = FIO[2];
-                    string lastname = FIO[1];
+                    string lastname = FIO[0];
                     birth = dateTimePicker1.Text;
                     if (radioButton1.Checked) { gender = radioButton1.Text; }
                     else { gender = radioButton2.Text; }

@@ -56,6 +56,7 @@ namespace clientApp.Forms
                     role = 1;
                 }
                 DataTransfer.checkRole = role;
+                connectionUser.Close();
             }
             catch(Exception ex)
             {

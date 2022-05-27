@@ -63,7 +63,6 @@ namespace clientApp.Forms
             this.textBox6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox6.Location = new System.Drawing.Point(268, 246);
             this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
             this.textBox6.Size = new System.Drawing.Size(300, 23);
             this.textBox6.TabIndex = 62;
             // 
@@ -84,9 +83,9 @@ namespace clientApp.Forms
             this.checkBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox2.Location = new System.Drawing.Point(384, 198);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(38, 19);
+            this.checkBox2.Size = new System.Drawing.Size(36, 19);
             this.checkBox2.TabIndex = 60;
-            this.checkBox2.Text = "Ж";
+            this.checkBox2.Text = "ж";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
@@ -96,9 +95,9 @@ namespace clientApp.Forms
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.Location = new System.Drawing.Point(343, 198);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(37, 19);
+            this.checkBox1.Size = new System.Drawing.Size(36, 19);
             this.checkBox1.TabIndex = 59;
-            this.checkBox1.Text = "М";
+            this.checkBox1.Text = "м";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label16
@@ -185,7 +184,6 @@ namespace clientApp.Forms
             this.textBox5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.Location = new System.Drawing.Point(267, 348);
             this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(300, 23);
             this.textBox5.TabIndex = 50;
             // 
@@ -204,7 +202,6 @@ namespace clientApp.Forms
             this.textBox4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.Location = new System.Drawing.Point(267, 297);
             this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(300, 23);
             this.textBox4.TabIndex = 48;
             // 
@@ -355,6 +352,7 @@ namespace clientApp.Forms
             this.Controls.Add(this.label1);
             this.Name = "EditingProfile";
             this.Text = "SoftAir | Редактирование профиля";
+            this.Load += new System.EventHandler(this.EditingProfile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
