@@ -29,6 +29,7 @@ namespace clientApp.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyTicket));
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -212,7 +213,7 @@ namespace clientApp.Forms
             this.label8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(202, 733);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(218, 19);
+            this.label8.Size = new System.Drawing.Size(199, 19);
             this.label8.TabIndex = 68;
             this.label8.Text = "обратиться в поддержку";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -308,7 +309,7 @@ namespace clientApp.Forms
             this.label11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(142, 448);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 25);
+            this.label11.Size = new System.Drawing.Size(68, 25);
             this.label11.TabIndex = 75;
             this.label11.Text = "Цена:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -343,8 +344,9 @@ namespace clientApp.Forms
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuyTicket";
-            this.Text = "BuyTicket";
+            this.Text = "SoftAir | Покупка билетов";
             this.Load += new System.EventHandler(this.BuyTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
