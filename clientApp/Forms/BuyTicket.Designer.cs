@@ -59,7 +59,6 @@ namespace clientApp.Forms
             // 
             // textBox6
             // 
-            this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox6.Location = new System.Drawing.Point(146, 211);
             this.textBox6.Name = "textBox6";
@@ -78,7 +77,6 @@ namespace clientApp.Forms
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Location = new System.Drawing.Point(145, 152);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -97,7 +95,6 @@ namespace clientApp.Forms
             // 
             // textBox5
             // 
-            this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.Location = new System.Drawing.Point(145, 320);
             this.textBox5.Name = "textBox5";
@@ -116,7 +113,6 @@ namespace clientApp.Forms
             // 
             // textBox4
             // 
-            this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.Location = new System.Drawing.Point(145, 268);
             this.textBox4.Name = "textBox4";
@@ -147,7 +143,6 @@ namespace clientApp.Forms
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(145, 98);
             this.textBox1.Name = "textBox1";
@@ -167,10 +162,10 @@ namespace clientApp.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(179, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 35);
+            this.label1.Size = new System.Drawing.Size(246, 33);
             this.label1.TabIndex = 39;
             this.label1.Text = "Покупка билета";
             // 
@@ -217,7 +212,7 @@ namespace clientApp.Forms
             this.label8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(202, 733);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 19);
+            this.label8.Size = new System.Drawing.Size(218, 19);
             this.label8.TabIndex = 68;
             this.label8.Text = "обратиться в поддержку";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -242,6 +237,7 @@ namespace clientApp.Forms
             this.radioButton2.TabIndex = 70;
             this.radioButton2.Text = "Комфорт-класс";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -253,10 +249,10 @@ namespace clientApp.Forms
             this.radioButton1.TabIndex = 69;
             this.radioButton1.Text = "Бизнес-класс";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox7
             // 
-            this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox7.Location = new System.Drawing.Point(145, 408);
             this.textBox7.Name = "textBox7";
@@ -312,7 +308,7 @@ namespace clientApp.Forms
             this.label11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(142, 448);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 25);
+            this.label11.Size = new System.Drawing.Size(71, 25);
             this.label11.TabIndex = 75;
             this.label11.Text = "Цена:";
             this.label11.Click += new System.EventHandler(this.label11_Click);

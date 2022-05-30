@@ -36,7 +36,7 @@ namespace clientApp.Forms
                 {
                     if (paths[i]=="bin") paths.
                 }*/
-                StreamReader sr = new StreamReader("F:/Диста 20-21/курсач/client/clientApp/clientApp/TextFiles/Information.txt");
+                StreamReader sr = new StreamReader("Z:/share9xx/922/Люди/Шевцов/client/clientApp/clientApp/TextFiles/Information.txt");
                 textInfo = sr.ReadLine();
                 while (textInfo != null)
                 {
@@ -48,10 +48,6 @@ namespace clientApp.Forms
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                MessageBox.Show("Извлечение выполнено успешно");
             }
         }
 

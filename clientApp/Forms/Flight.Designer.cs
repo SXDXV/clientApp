@@ -57,10 +57,10 @@ namespace clientApp.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(24, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 35);
+            this.label1.Size = new System.Drawing.Size(107, 33);
             this.label1.TabIndex = 13;
             this.label1.Text = "Рейсы";
             // 
@@ -84,7 +84,6 @@ namespace clientApp.Forms
             // 
             // comboBox1
             // 
-            this.comboBox1.Enabled = false;
             this.comboBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {

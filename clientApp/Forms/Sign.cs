@@ -15,7 +15,7 @@ namespace clientApp
 
     public partial class Sign : Form
     {
-        static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
+        static string conUser = "server=localhost;user=userAir;password=userAir12345;database=airport;port=3306";
         MySqlConnection connectionUser = new MySqlConnection(conUser);
         
         // Импользуемые формы
@@ -23,8 +23,6 @@ namespace clientApp
         Forms.Information information;
         Forms.UserProfile userProfile;
 
-        //public static string checkLogin { get; set; }
-        //public static string checkPassword { get; set; }
 
         public Sign()
         {
@@ -34,13 +32,13 @@ namespace clientApp
         private void Sign_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             registration = new Registration();
             SwitchForms.SwitchFormsMethod(ref registration, this);
-            //SwitchForms.SwitchFormsMethod<Registration, Sign>(ref registration, this);
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -59,14 +57,16 @@ namespace clientApp
             {
                 connectionUser.Open();
                 DataTable dTable = new DataTable();
-                //String sqlQuery = "SELECT * FROM airport.пользователи_пп where Логин = '"+checkLogin+"' and Пароль = '"+checkPassword+"';";
-                String sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + checkLog + "' and `Пароль` = '" + checkPass + "';";
+                string sqlQuery = "SELECT * FROM airport.`пользователи_пп` where `Логин` = '" + checkLog + "' and `Пароль` = MD5('" + checkPass + "');";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuery, connectionUser);
                 adapter.Fill(dTable);
                 if (dTable.Rows.Count != 0)
                 {
                     DataTransfer.checkLogin = checkLog;
-                    DataTransfer.checkPassword = checkPass;
+                    DataTransfer.checkPassword = dTable.Rows[0]["Пароль"].ToString();
+                    DataTransfer.checkGender = dTable.Rows[0]["Пол"].ToString();
+                    DataTransfer.checkBirth = dTable.Rows[0]["Дата рождения"].ToString();
+                    DataTransfer.checkPasport = dTable.Rows[0]["Паспортные данные"].ToString();
                     userProfile = new Forms.UserProfile();
                     SwitchForms.SwitchFormsMethod(ref userProfile, this);
                 }

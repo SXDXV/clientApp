@@ -61,12 +61,14 @@ namespace clientApp.Forms
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, connectionUser);
                 DataSet ds = new DataSet();
                 adapter.Fill(dTable);
+                adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
                 connectionUser.Close();
 
                 DataTransfer.checkDate = date;
-                DataTransfer.checkCodeFlight = Convert.ToInt32(dTable.Rows[0]["Код рейса"]); ;
-                DataTransfer.checkPrice = Convert.ToInt32(dTable.Rows[0]["Цена(без скидки)"]);
+                DataTransfer.checkCodeFlight = Convert.ToInt32(dTable.Rows[0]["Код рейса"]);
+                DataTransfer.checkPriceBiz = Convert.ToInt32(dTable.Rows[0]["Цена эконом(рублей)"]);
+                DataTransfer.checkPrice = Convert.ToInt32(dTable.Rows[0]["Цена бизнес(рублей)"]);
 
             }
             catch (Exception ex)

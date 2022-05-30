@@ -22,7 +22,7 @@ namespace clientApp.Forms
         Sign sign = new Sign();
 
         static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
-        static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
+        static string conUser = "server=localhost;user=userAir;password=userAir12345;database=airport;port=3306";
         MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
 
@@ -35,6 +35,7 @@ namespace clientApp.Forms
 
         private void UserProfile_Load(object sender, EventArgs e)
         {
+            label2.Text = "Здравствуйте, " + DataTransfer.checkLogin + "!";
             role = 1;
             string login = DataTransfer.checkLogin;
             string password = DataTransfer.checkPassword;

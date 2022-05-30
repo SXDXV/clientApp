@@ -17,7 +17,7 @@ namespace clientApp.Forms
         Appeal appeal;
 
         static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
-        static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
+        static string conUser = "server=localhost;user=userAir;password=userAir12345;database=airport;port=3306";
         MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
 
@@ -35,6 +35,8 @@ namespace clientApp.Forms
                 string name = FIO[1];
                 string midname = FIO[2];
                 string lastname = FIO[0];
+                int place = Convert.ToInt32(numericUpDown1.Value);
+                int flight = Convert.ToInt32(DataTransfer.checkCodeFlight.ToString());
                 string passport;
                 string eMail = "";
                 string numberOfPhone;
@@ -43,30 +45,33 @@ namespace clientApp.Forms
                 numberOfPhone = textBox5.Text;
 
                 DataTable dTable = new DataTable();
-                string sqlQueryDel;
+                DataTable dTable2 = new DataTable();
+                DataTable dTable3 = new DataTable();
+                string sqlQuerySelect;
                 string sqlQueryAdd;
+                string sqlQueryIns;
+
+                string dataFormat = DataTransfer.checkBirth;
+                dataFormat = dataFormat.Remove(10, 8);
+                string[] format = dataFormat.Split('.');
+                string dataCor = format[2] + "-" + format[1] + "-" + format[0];
 
                 try
                 {
-                    //connectionAdmin.Open();
-                    ////sqlQuery = ("INSERT INTO `airport`.`пользователи_пп` (`Логин`, `Пароль`, `Роль`) VALUES ('" + login + "', '" + password + "', '1');");
-                    //sqlQueryDel = ("DELETE FROM `airport`.`пользователи_пп` WHERE `Логин` = '" + DataTransfer.checkLogin + "' and `Пароль` = '" + DataTransfer.checkPassword + "';");
-                    ////"('" + passport + "', '" + lastname + "', '" + name + "', '" + midname + "', '" + gender + "', '" + birth + "', '" + eMail + "', '" + numberOfPhone + "', '" + login + "', '" + password + "', '1');");
-                    //MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQueryDel, connectionAdmin);
-                    //adapter.Fill(dTable);
-                    //connectionAdmin.Close();
+                    connectionAdmin.Open();
+                    sqlQuerySelect = "SELECT * FROM airport.билеты;";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(sqlQuerySelect, connectionAdmin);
+                    adapter.Fill(dTable);
 
-                    //connectionAdmin.Open();
-                    //sqlQueryAdd = ("INSERT INTO `airport`.`пользователи_пп` " +
-                    //    "(`Паспортные данные`, `Фамилия`, `Имя`, `Отчество`, `Пол`, `Дата рождения`, `Почта`, `Мобильный телефон`, `Логин`, `Пароль`, `Роль`) VALUES " +
-                    //    "('" + passport + "', '" + lastname + "', '" + name + "', '" + midname + "', '" + gender + "', '" + birth + "', '" + eMail + "', '" + numberOfPhone + "', '" + DataTransfer.checkLogin + "', '" + DataTransfer.checkPassword + "', '" + DataTransfer.checkRole + "');");
-                    //MySqlDataAdapter adapter2 = new MySqlDataAdapter(sqlQueryAdd, connectionAdmin);
-                    //adapter2.Fill(dTable);
-                    //MessageBox.Show("Вы успешно сменили персональные данные!", "Уведомление");
-                    //connectionAdmin.Close();
+                    //INSERT INTO `airport`.`клиенты` (`Паспортные данные`, `Фамилия`, `Имя`, `Отчество`, `Пол`, `Дата рождения`, `Почта`, `Мобильный телефон`) VALUES ('8888 888888', 'ф', 'и', 'о', 'м', '0200-11-08', 'fffff@gmail.com', '+79112045854');
+                    sqlQueryIns = "INSERT INTO `airport`.`клиенты` (`Паспортные данные`, `Фамилия`, `Имя`, `Отчество`, `Пол`, `Дата рождения`, `Почта`, `Мобильный телефон`) VALUES ('"+passport+"', '"+lastname+"', '"+name+"', '"+midname+"', '"+DataTransfer.checkGender+"', '"+ dataCor+ "', '"+eMail+"', '"+numberOfPhone+"');";
+                    MySqlDataAdapter adapter3 = new MySqlDataAdapter(sqlQueryIns, connectionAdmin);
+                    adapter3.Fill(dTable3);
 
-                    //MessageBox.Show("Билет успешно оформлен!", "Уведомление");
-                    //this.Close();
+                    sqlQueryAdd = "INSERT INTO `airport`.`билеты` (`Номер билета`, `Паспортные данные`, `Место`, `Код рейса`, `Цена(без скидки)`) VALUES ('"+ (Convert.ToInt32(dTable.Rows[dTable.Rows.Count-1]["Номер билета"]) + 1) +"', '"+passport+"', '"+place+"', '"+flight+"', '"+DataTransfer.checkPriceBiz +"');";
+                    MySqlDataAdapter adapter2 = new MySqlDataAdapter(sqlQueryAdd, connectionAdmin);
+                    adapter2.Fill(dTable2);
+                    connectionAdmin.Close();
                 }
                 catch (Exception ex)
                 {
@@ -118,6 +123,16 @@ namespace clientApp.Forms
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            label11.Text = "Цена: " + DataTransfer.checkPrice.ToString();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label11.Text = "Цена: " + DataTransfer.checkPriceBiz.ToString();
         }
     }
 }

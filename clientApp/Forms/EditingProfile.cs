@@ -18,7 +18,7 @@ namespace clientApp.Forms
         UserProfile userProfile;
 
         static string conAdmin = "server=localhost;user=root;password=12345;database=airport;port=3306";
-        static string conUser = "server=localhost;user=userAir;password=;database=airport;port=3306";
+        static string conUser = "server=localhost;user=userAir;password=userAir12345;database=airport;port=3306";
         MySqlConnection connectionAdmin = new MySqlConnection(conAdmin);
         MySqlConnection connectionUser = new MySqlConnection(conUser);
 
@@ -122,7 +122,7 @@ namespace clientApp.Forms
             }
             catch (Exception ex)
             {
-                connectionAdmin.Open();
+                connectionAdmin.Clone();
                 MessageBox.Show(ex.Message);
             }
         }
